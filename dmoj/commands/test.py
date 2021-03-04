@@ -1,6 +1,5 @@
 import sys
 import traceback
-from operator import itemgetter
 
 from dmoj.commands.base_command import Command
 from dmoj.error import InvalidCommandException
@@ -72,7 +71,7 @@ class TestCommand(Command):
 
         problem_id = args.problem_id
 
-        if problem_id not in map(itemgetter(0), get_supported_problems()):
+        if problem_id not in get_supported_problems():
             raise InvalidCommandException("unknown problem '%s'" % problem_id)
 
         tester = ProblemTester()
