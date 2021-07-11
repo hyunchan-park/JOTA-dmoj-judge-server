@@ -16,6 +16,7 @@ JOTA는 DMOJ와 마찬가지로 web, judge server 두 개의 파트로 분리되
 1. JCloud 인스턴스 생성 및 설정하기
 2. JOTA Web 설정하기
 3. [JOTA Judge 설정하기](docs/README_JOTA_WEB.md)
+4. [문제 등록하기](docs/README_REG_PROBLEM.md)
 
 ### Appendix
 - [dmoj release 버전으로 JOTA 구축하기](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/jota%20%EC%8A%A4%EB%83%85%EC%83%B7%20%EC%82%AC%EC%9A%A9%EB%B2%95.md) (**Not Forked Version, Cannot PR**)
