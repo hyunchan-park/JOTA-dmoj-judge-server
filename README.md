@@ -5,17 +5,17 @@ JOTA는 전북대 컴퓨터공학부에서 프로그래밍 과제 제출 및 자
 Contact: hyunchan.park@jbnu.ac.kr (박현찬 교수님)
 
 ## Repositories
-JOTA는 DMOJ와 마찬가지로 web, judge server 두 개의 파트로 분리되어 각각 다른 프로젝트로 관리합니다.
+JOTA는 DMOJ와 마찬가지로 Site, Judge Server 두 개의 파트로 분리되어 각각 다른 프로젝트로 관리합니다.
 
-- Web: https://github.com/hyunchan-park/JOTA-dmoj-online-judge
+- Site: https://github.com/hyunchan-park/JOTA-dmoj-online-judge
 - Judge: https://github.com/hyunchan-park/JOTA-dmoj-judge-server
 
 ## Documents
 
 ### General
 1. JCloud 인스턴스 생성 및 설정하기
-2. JOTA Web 설정하기
-3. [JOTA Judge 설정하기](docs/README_JOTA_WEB.md)
+2. JOTA Site 설정하기
+3. [JOTA Judge 설정하기](docs/README_JOTA_JUDGE.md)
 4. [문제 등록하기](docs/README_REG_PROBLEM.md)
 
 ### Appendix
