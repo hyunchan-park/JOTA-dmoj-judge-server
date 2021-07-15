@@ -38,6 +38,8 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
         for name, source in self.source_dict.items():
             if '.' not in name:
                 name += '.' + self.ext
+                
+            os.makedirs(os.path.dirname(self._file(name)), exist_ok=True)
             with open(self._file(name), 'wb') as fo:
                 fo.write(utf8bytes(source))
             self.source_paths.append(name)
