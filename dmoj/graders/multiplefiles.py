@@ -26,7 +26,7 @@ class MultipleFilesGrader(StandardGrader):
                 raise InternalError('invalid header container type %s' % type(handler_data))
 
             return executors[self.language].Executor(
-                self.problem.id, self.source, aux_sources=aux_sources, defines=['-DMULTIPLE_FILE_GRADER'],
+                self.problem.id, self.sources, aux_sources=aux_sources, defines=['-DMULTIPLE_FILE_GRADER'],
             )
 
         else:
