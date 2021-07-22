@@ -1,8 +1,10 @@
 # Registering Problem
 
-**DMOJ official docs**: https://docs.dmoj.ca/#/problem_format/problem_format
+**DMOJ official docs**
 
-**DMOJ official examples**: https://github.com/DMOJ/docs/tree/master/problem_examples
+* [Problem Format](https://docs.dmoj.ca/#/problem_format/problem_format)
+* [Managing Problems Through the Site Interface](https://docs.dmoj.ca/#/site/managing_problems)
+* [Problem Example Files](https://github.com/DMOJ/docs/tree/master/problem_examples)
 
 ## 시작하기 전 필독
 * 반드시 공식 문서를 읽으면서 진행하십시오.
@@ -26,7 +28,7 @@
 
 4. 테스트케이스 데이터 `tc_data.zip` 를 다운로드합니다. `curl`로 다운로드 하면 judge가 파일을 읽지 못하므로 `wget`로 다운로드 하십시오.
     ```
-    ~/jota/problems/aplusb$ wget -o tc_data.zip https://github.com/DMOJ/docs/raw/master/problem_examples/standard/aplusb/aplusb.zip
+    ~/jota/problems/aplusb$ wget -O tc_data.zip https://github.com/DMOJ/docs/raw/master/problem_examples/standard/aplusb/aplusb.zip
     ```
 
 5. `init.yml` 을 생성하고 아래의 내용을 기입 후 저장합니다.
