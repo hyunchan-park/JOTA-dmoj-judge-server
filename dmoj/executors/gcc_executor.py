@@ -27,8 +27,11 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
 
     def __init__(self, problem_id, main_source, **kwargs):
         self.source_dict = kwargs.pop('aux_sources', {})
-        if main_source:
+        if type(main_source) is bytes: # program test code as plain text
             self.source_dict[problem_id + self.ext] = main_source
+        elif type(main_source) is dict: # submission code as json dictionary format
+            for k, v in main_source.items():
+                self.source_dict[k] = v
         self.defines = kwargs.pop('defines', [])
 
         super().__init__(problem_id, main_source, **kwargs)
@@ -38,6 +41,8 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
         for name, source in self.source_dict.items():
             if '.' not in name:
                 name += '.' + self.ext
+                
+            os.makedirs(os.path.dirname(self._file(name)), exist_ok=True)
             with open(self._file(name), 'wb') as fo:
                 fo.write(utf8bytes(source))
             self.source_paths.append(name)
