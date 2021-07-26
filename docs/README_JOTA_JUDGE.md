@@ -46,55 +46,8 @@ original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=judge-side-setup
     ~/jota/judge$ sudo pip3 install -e .
     ```
 
-# 기존 설치 방법
 
-**Docker 또는 PyPI** 중 택일하면 됩니다. (**PyPI** 를 권장합니다. Docker 는 테스트하지 않았습니다.)
-
-## With Docker
-original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=with-docker
-
-* `docker` 패키지 설치 (버전에 따라 택일)
-    
-    ```
-    $ sudo snap install docker     # version 19.03.13, or
-    $ sudo apt  install docker.io  # version 20.10.2-0ubuntu1~20.04.2
-    ```
-    
-* docker 실행 예 #1
-    ```
-    ~/jota$ cd judge/.docker
-    ~/jota/judge/.docker$ sudo make judge-tier1
-    ~/jota/judge/.docker$ docker run \
-                            -v /home/ubuntu/jota/problems:/problems \
-                            --cap-add=SYS_PTRACE \
-                            dmoj/judge-tier1:latest \
-                            cli -c /problems/judge.yml
-    ```
-
-* docker 실행 예 #2
-    ```
-    $ docker run \
-        --name judge \
-        -p "$(ip addr show dev enp1s0 | perl -ne 'm@inet (.*)/.*@ and print$1 and exit')":9998:9998 \
-        -v /home/ubuntu/jota/problems:/problems \
-        --cap-add=SYS_PTRACE \
-        -d \
-        --restart=always \
-        dmoj/judge-tier1:latest \
-        run -p "$PORT" -c /problems/judge.yml \
-        "$IP" "$JUDGE_NAME" "$JUDGE_AUTHENTICATION_KEY"
-    ```
-
-## Through PyPI
-### **Installing the prerequisites**
-original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=installing-the-prerequisites
-
-```
-$ sudo apt install python3-dev python3-pip build-essential libseccomp-dev
-$ sudo pip3 install dmoj
-```
-
-### **Configuring the judge**
+## **Configuring the judge**
 original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=configuring-the-judge
 
 * `judge.yml` 파일 만들기
