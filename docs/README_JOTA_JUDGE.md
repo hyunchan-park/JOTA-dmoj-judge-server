@@ -38,12 +38,15 @@ original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=judge-side-setup
     ~/jota$ mkdir problems
     ```
     
-* fork 했던 저장소를 `judge` 폴더 안에 저장
+* `judge` 폴더에 server repo fork
     
     ```
     ~/jota$ git clone --recursive https://github.com/<your-github-id>/JOTA-dmoj-judge-server judge
     ~/jota$ cd judge
+    ~/jota/judge$ sudo pip3 install -e .
     ```
+
+# 기존 설치 방법
 
 **Docker 또는 PyPI** 중 택일하면 됩니다. (**PyPI** 를 권장합니다. Docker 는 테스트하지 않았습니다.)
 
@@ -128,8 +131,10 @@ original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=configuring-the-jud
       ```
   
   9. 수정된 `judge.yml` 파일을 저장합니다.
-  
-* judge를 사이트에 붙이기 전 CLI judge 테스트 후 `Ctrl+C` 입력하여 종료 
+
+* Judge 서버를 열기 위한 새 SSH 연결 세션을 만듭니다. (세션 #3)
+* judge를 사이트에 붙이기 전에 CLI judge 테스트 후 `Ctrl+C` 입력하여 종료 
+
     ```
     ~/jota/judge$ dmoj-cli -c judge.yml
     Self-testing executors

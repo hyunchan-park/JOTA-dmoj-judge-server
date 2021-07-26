@@ -26,8 +26,16 @@ class MultipleFilesGrader(StandardGrader):
                 raise InternalError('invalid header container type %s' % type(handler_data))
 
             return executors[self.language].Executor(
+<<<<<<< HEAD
                 self.problem.id, self.source, aux_sources=aux_sources, defines=['-DMULTIPLE_FILE_GRADER'],
             )
 
         else:
             raise InternalError('no valid runtime for signature grading %s found' % self.language)
+=======
+                self.problem.id, self.sources, aux_sources=aux_sources, defines=['-DMULTIPLE_FILE_GRADER'],
+            )
+
+        else:
+            raise InternalError('no valid runtime for signature grading %s found' % self.language)
+>>>>>>> upstream/master
