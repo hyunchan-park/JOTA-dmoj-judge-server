@@ -3,8 +3,17 @@ from dmoj.utils.unicode import utf8bytes
 
 
 class BaseGrader:
-    def __init__(self, judge, problem, language, source):
-        self.source = utf8bytes(source)
+    def __init__(self, judge, problem, language, json_source):
+        import json
+
+        self.sources = dict() # instead of name `source`
+        for k, v in json.loads(json_source).items():
+            self.sources[k] = utf8bytes(v)
+        #for k, v in self.sources.items():
+            #print("filename: ", k, " code: \n------------------\n", v);
+
+        #self.source = utf8bytes(json_source)
+        
         self.language = language
         self.problem = problem
         self.judge = judge

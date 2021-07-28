@@ -27,9 +27,12 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
 
     def __init__(self, problem_id, main_source, **kwargs):
         self.source_dict = kwargs.pop('aux_sources', {})
-        if main_source:
+        if type(main_source) is bytes: # program test code as plain text
             self.source_dict[problem_id + self.ext] = main_source
         self.defines = kwargs.pop('defines', [])
+        elif type(main_source) is dict: # submission code as json dictionary format
+            for k, v in main_source.items():
+                self.source_dict[k] = v
 
         super().__init__(problem_id, main_source, **kwargs)
 
