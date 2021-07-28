@@ -33,6 +33,9 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
             for k, v in main_source.items():
                 self.source_dict[k] = v
         self.defines = kwargs.pop('defines', [])
+        elif type(main_source) is dict: # submission code as json dictionary format
+            for k, v in main_source.items():
+                self.source_dict[k] = v
 
         super().__init__(problem_id, main_source, **kwargs)
 
