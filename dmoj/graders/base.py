@@ -6,13 +6,13 @@ class BaseGrader:
     def __init__(self, judge, problem, language, json_source):
         import json
 
-        self.sources = dict() # instead of name `source`
-        for k, v in json.loads(json_source).items():
-            self.sources[k] = utf8bytes(v)
+        #self.sources = dict() # instead of name `source`
+        #for k, v in json.loads(json_source).items():
+        #    self.sources[k] = utf8bytes(v)
         #for k, v in self.sources.items():
             #print("filename: ", k, " code: \n------------------\n", v);
 
-        #self.source = utf8bytes(json_source)
+        self.sources = utf8bytes(json_source)
         self.language = language
         self.problem = problem
         self.judge = judge
