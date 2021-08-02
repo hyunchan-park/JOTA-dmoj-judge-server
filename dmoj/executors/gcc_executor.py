@@ -30,6 +30,9 @@ class GCCExecutor(SingleDigitVersionMixin, CompiledExecutor):
         if type(main_source) is bytes: # program test code as plain text
             self.source_dict[problem_id + self.ext] = main_source
         elif type(main_source) is dict: # submission code as json dictionary format
+            if 'null' in main_source: # un-named single code in editor
+                self.source_dict[problem_id + self.ext] = main_source['null']
+                main_source.pop('null')
             for k, v in main_source.items():
                 self.source_dict[k] = v
         self.defines = kwargs.pop('defines', [])
