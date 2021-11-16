@@ -43,6 +43,7 @@ original: https://docs.dmoj.ca/#/judge/setting_up_a_judge?id=judge-side-setup
     ```
     ~/jota$ git clone --recursive https://github.com/<your-github-id>/JOTA-dmoj-judge-server judge
     ~/jota$ cd judge
+    ~/jota/judge$ sudo apt install libseccomp-dev 
     ~/jota/judge$ sudo pip3 install -e .
     ```
 
