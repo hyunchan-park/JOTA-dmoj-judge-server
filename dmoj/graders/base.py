@@ -12,7 +12,6 @@ class BaseGrader:
         #for k, v in self.sources.items():
             #print("filename: ", k, " code: \n------------------\n", v);
 
-        #self.sources = utf8bytes(json_source)
         self.language = language
         self.problem = problem
         self.judge = judge
