@@ -5,3 +5,4 @@ cython
 pygments
 setproctitle
 pylru
+diff_match_patch
