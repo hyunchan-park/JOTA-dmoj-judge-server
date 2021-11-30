@@ -15,3 +15,6 @@
     * `group_test_cases`에서 리턴한 `diff`를 `context`에 `'diff_result'`를 키로 갖도록 넣습니다.
 * **status_testcases.html**
     * `view`에서 받은 `diff_result`를 `patch`에 알맞게 보여줍니다.
+
+## FrontEnd Document
+[Link](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/FrontVisualization.md)
