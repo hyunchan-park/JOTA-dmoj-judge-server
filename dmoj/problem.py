@@ -151,6 +151,8 @@ class Problem:
             return graders.SignatureGrader
         elif 'interactive' in self.config:
             return graders.BridgedInteractiveGrader
+        elif 'files' in self.config:
+            return graders.MultipleFilesGrader
         else:
             return graders.StandardGrader
 

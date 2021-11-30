@@ -73,7 +73,7 @@ class StandardGrader(BaseGrader):
                 check = checker(
                     result.proc_output,
                     case.output_data(),
-                    submission_source=self.source,
+                    submission_source=self.sources,
                     judge_input=case.input_data(),
                     point_value=case.points,
                     case_position=case.position,
@@ -120,7 +120,7 @@ class StandardGrader(BaseGrader):
     def _generate_binary(self):
         return executors[self.language].Executor(
             self.problem.id,
-            self.source,
+            self.sources,
             hints=self.problem.config.hints or [],
             unbuffered=self.problem.config.unbuffered,
         )

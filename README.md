@@ -1,21 +1,29 @@
-# JOTA: JBNU Online Teaching Assistant
+# JOTA: JBNU Online Teaching Assistant **(Judge)**
 
 JOTA는 전북대 컴퓨터공학부에서 프로그래밍 과제 제출 및 자동 채점을 위해 만들어진 서비스입니다. 오픈소스인 아래 DMOJ 프로젝트를 기반으로 구축하였고 필요한 기능, 오류 수정 등을 학부 학생들이 직접 진행하고 있습니다. 특히 3학년 2학기 오픈소스SW개발 수업에서 프로젝트로 진행합니다. 
 
 Contact: hyunchan.park@jbnu.ac.kr (박현찬 교수님)
 
 ## Repositories
-JOTA는 DMOJ와 마찬가지로 web, judge server 두 개의 파트로 분리되어 각각 다른 프로젝트로 관리합니다.
-- web: https://github.com/hyunchan-park/JOTA-dmoj-online-judge
-- judge: https://github.com/hyunchan-park/JOTA-dmoj-judge-server
+JOTA는 DMOJ와 마찬가지로 Site, Judge Server 두 개의 파트로 분리되어 각각 다른 프로젝트로 관리합니다.
+
+- Site: https://github.com/hyunchan-park/JOTA-dmoj-online-judge
+- Judge: https://github.com/hyunchan-park/JOTA-dmoj-judge-server
 
 ## Documents
-- JCloud 기반 JOTA 개발 환경 구축 메뉴얼: [CLICK](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/jota%20%EC%8A%A4%EB%83%85%EC%83%B7%20%EC%82%AC%EC%9A%A9%EB%B2%95.md)
-  
+
+### General
+1. [JCloud 인스턴스 생성 및 설정하기](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/README_JCLOUD.md)
+2. [JOTA Site 설정하기](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/README_JOTA_SITE.md)
+3. [JOTA Judge 설정하기](docs/README_JOTA_JUDGE.md)
+4. [문제 등록하기](docs/README_REG_PROBLEM.md)
+
+### Appendix
+- [dmoj release 버전으로 JOTA 구축하기](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/jota%20%EC%8A%A4%EB%83%85%EC%83%B7%20%EC%82%AC%EC%9A%A9%EB%B2%95.md) (**Not Forked Version, Cannot PR**)
+
 -----
 
 # DMOJ Judge [![amd64 Build Status](https://img.shields.io/github/workflow/status/DMOJ/judge-server/build?logo=github)](https://github.com/DMOJ/judge-server/actions?query=workflow%3Abuild) [![arm64 Build Status](https://img.shields.io/travis/DMOJ/judge-server/master?label=arm64&logo=travis)](https://travis-ci.org/github/DMOJ/judge-server) [![FreeBSD Build Status](https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fci.dmoj.ca%2Fview%2FDMOJ%2Fjob%2Fdmoj-judge-freebsd-py3%2F&logo=freebsd)](https://ci.dmoj.ca/view/DMOJ/job/dmoj-judge-freebsd-py3/) [![Coverage](https://img.shields.io/codecov/c/github/DMOJ/judge-server.svg)](https://codecov.io/gh/DMOJ/judge-server) [![Slack](https://slack.dmoj.ca/badge.svg)](https://slack.dmoj.ca)
-=====
 
 Python [AGPLv3](LICENSE) contest judge backend for the [DMOJ site](http://github.com/DMOJ/online-judge) interface. See it in action at [dmoj.ca](https://dmoj.ca/)!
 
