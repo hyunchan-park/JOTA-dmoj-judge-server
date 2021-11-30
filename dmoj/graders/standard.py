@@ -36,25 +36,9 @@ class StandardGrader(BaseGrader):
         result.points = check.points
         result.feedback = check.feedback or result.feedback
         # result.extended_feedback = check.extended_feedback or result.extended_feedback
+        result.extended_feedback = case.output_data().decode()
         
         case.free_data()
-        # log.info('*** case.output_data: %s', case.output_data())
-        # log.info('*** result.output: %s', result.output)
-        # log.info('*** result.proc_output: %s', result.proc_output)
-        # log.info('*** result.extended_feedback: %s', result.extended_feedback)
-        # log.info('Your: %s', result.proc_output.decode())
-        # log.info('Answer: %s', case.output_data().decode())
-        
-        # string = '\n'
-        # result.extended_feedback = json.dumps(diff_match_patch().diff_main(result.proc_output.decode(), case.output_data().decode()))
-        result.extended_feedback = case.output_data().decode()
-
-        # log.info(result.diff_result)
-        # result.proc_output = case.output_data()
-        # result.proc_output = b"".join([result.proc_output, str.encode(string)])
-        # result.diff_result = diff_match_patch().diff_main("result.output", "case.output_data()")
-        # result.diff_result = [(-1, "Hell"), (1, "G"), (0, "o"), (1, "odbye"), (0, " World.")]
-        # result.proc_output = b"".join([result.proc_output, case.output_data()])
 
         return result
 
