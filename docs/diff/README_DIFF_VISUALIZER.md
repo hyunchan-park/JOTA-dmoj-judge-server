@@ -22,8 +22,5 @@
 * **status_testcases.html**
     * `view`에서 받은 `diff_result`를 `patch`에 알맞게 보여줍니다.
 
-* **error**
-    
-
 ## FrontEnd Document
 [Link](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/FrontVisualization.md)
