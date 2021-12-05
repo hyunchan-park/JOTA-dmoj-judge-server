@@ -22,5 +22,8 @@
 * **status_testcases.html**
     * `view`에서 받은 `diff_result`를 `patch`에 알맞게 보여줍니다.
 
+## How to change diff option
+* cleanupSemantics 메소드를 통해 diff를 단어 단위로 적용할 수 있다. 현재는 적용 되어있지 않다. [참고](https://github.com/google/diff-match-patch/wiki/API)
+
 ## FrontEnd Document
-[Link](https://github.com/hyunchan-park/JOTA-dmoj-online-judge/blob/master/docs/FrontVisualization.md)
+[Link](https://github.com/minshxxx/JOTA-dmoj-online-judge/blob/master/docs/FrontVisualization.md)
