@@ -1,5 +1,6 @@
 import logging
 import subprocess
+import json
 
 from dmoj.error import OutputLimitExceeded
 from dmoj.executors import executors
@@ -33,8 +34,8 @@ class StandardGrader(BaseGrader):
         result.result_flag |= [Result.WA, Result.AC][check.passed]
         result.points = check.points
         result.feedback = check.feedback or result.feedback
-        result.extended_feedback = check.extended_feedback or result.extended_feedback
-
+        result.extended_feedback = case.output_data().decode()
+        
         case.free_data()
 
         return result
